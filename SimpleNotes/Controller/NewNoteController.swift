@@ -1,11 +1,10 @@
-
-
 import UIKit
 
 class NewNoteController: UIViewController {
-    
     var tempTitle = ""
     var tempText = ""
+    var allNotes: [NoteData]?
+    var currentIndex: Int = 0
     @IBOutlet weak var newNoteTitle: UITextField!
     @IBOutlet weak var noteTextField: UITextView!
     @IBOutlet weak var buttonSave: UIButton!{
@@ -17,13 +16,10 @@ class NewNoteController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
     }
     
     @IBAction func buttonSave(_ sender: Any) {
         saveNote()
-
     }
     
     // TODO: need to fix saving duplicates
@@ -31,23 +27,19 @@ class NewNoteController: UIViewController {
         let newNote = NoteData(context: Constants.context)
         newNote.title = newNoteTitle.text
         newNote.text = noteTextField.text
-        do {
-           try Constants.context.save()
-        }
-        catch {
-            print("Error saving context data \(error)")
-        }
+            do {
+                try Constants.context.save()
+            }
+            catch {
+                print("Error saving context data \(error)")
+            }
     }
-    
     
     // MARK: forming existing note after clicking at cell
     override func viewWillAppear(_ animated: Bool) {
         newNoteTitle.text = tempTitle
         noteTextField.text = tempText
     }
-    
-    
-
 }
 
 
