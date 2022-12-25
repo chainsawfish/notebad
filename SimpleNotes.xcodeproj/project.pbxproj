@@ -23,7 +23,6 @@
 		F6B966152833D68800FA56CF /* SimpleNotesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B966142833D68800FA56CF /* SimpleNotesUITestsLaunchTests.swift */; };
 		F6B966252834B1BA00FA56CF /* NoteData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B966232834B1BA00FA56CF /* NoteData+CoreDataClass.swift */; };
 		F6B966262834B1BA00FA56CF /* NoteData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B966242834B1BA00FA56CF /* NoteData+CoreDataProperties.swift */; };
-		F6D70623283B769F0068E9C3 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D70622283B769F0068E9C3 /* Fetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +63,6 @@
 		F6B966142833D68800FA56CF /* SimpleNotesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNotesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F6B966232834B1BA00FA56CF /* NoteData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteData+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F6B966242834B1BA00FA56CF /* NoteData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteData+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		F6D70622283B769F0068E9C3 /* Fetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				F6868E762835FAB6008D34F2 /* CustomViewCell.swift */,
-				F6D70622283B769F0068E9C3 /* Fetcher.swift */,
 				F6A7DFA6283910EF009333F6 /* NewNoteController.swift */,
 				F6B965F22833D68500FA56CF /* ViewController.swift */,
 			);
@@ -310,7 +307,6 @@
 				F6B965F32833D68500FA56CF /* ViewController.swift in Sources */,
 				F6B965EF2833D68500FA56CF /* AppDelegate.swift in Sources */,
 				F6868E782835FAB6008D34F2 /* CustomViewCell.swift in Sources */,
-				F6D70623283B769F0068E9C3 /* Fetcher.swift in Sources */,
 				F6B965F12833D68500FA56CF /* SceneDelegate.swift in Sources */,
 				F6B966262834B1BA00FA56CF /* NoteData+CoreDataProperties.swift in Sources */,
 				F6B966252834B1BA00FA56CF /* NoteData+CoreDataClass.swift in Sources */,

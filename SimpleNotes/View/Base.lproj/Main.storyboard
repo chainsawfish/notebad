@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8zn-5S-FLJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8zn-5S-FLJ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,7 +22,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGT-jP-FOR">
-                                <rect key="frame" x="361" y="93" width="33" height="31"/>
+                                <rect key="frame" x="359.5" y="97" width="34.5" height="34.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="+"/>
                                 <connections>
@@ -61,19 +62,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="i53-7o-q5p">
-                                <rect key="frame" x="27" y="160" width="360" height="678"/>
+                                <rect key="frame" x="10" y="174" width="394" height="678"/>
                                 <color key="backgroundColor" red="0.07177789068444955" green="0.96849877379604221" blue="0.78957583624362138" alpha="0.10002125850340136" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="360" id="48v-kV-Htv"/>
-                                    <constraint firstAttribute="height" constant="678" id="7em-BM-k7w"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="678" id="7em-BM-k7w"/>
                                 </constraints>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="48v-kV-Htv"/>
+                                    </mask>
+                                </variation>
                             </textView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NtK-44-XPI">
-                                <rect key="frame" x="50" y="118" width="290" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NtK-44-XPI">
+                                <rect key="frame" x="50" y="118" width="314" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="2bX-E7-yWX"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -93,8 +101,22 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="WrL-L0-wy8" firstAttribute="bottom" secondItem="i53-7o-q5p" secondAttribute="bottom" constant="24" id="04c-UV-qvk"/>
+                            <constraint firstItem="WrL-L0-wy8" firstAttribute="bottom" secondItem="i53-7o-q5p" secondAttribute="bottom" constant="10" id="19m-4Y-HP9"/>
+                            <constraint firstItem="WrL-L0-wy8" firstAttribute="trailing" secondItem="i53-7o-q5p" secondAttribute="trailing" constant="10" id="1fo-Ne-qK6"/>
                             <constraint firstItem="i53-7o-q5p" firstAttribute="centerX" secondItem="7Ym-E4-drn" secondAttribute="centerX" id="3Wk-h4-fOJ"/>
+                            <constraint firstItem="NtK-44-XPI" firstAttribute="top" secondItem="WrL-L0-wy8" secondAttribute="top" constant="26" id="6Uo-Ob-yIC"/>
+                            <constraint firstItem="NtK-44-XPI" firstAttribute="leading" secondItem="WrL-L0-wy8" secondAttribute="leading" constant="50" id="7Lc-0S-dbs"/>
+                            <constraint firstItem="i53-7o-q5p" firstAttribute="top" secondItem="NtK-44-XPI" secondAttribute="bottom" constant="10" id="Inh-zg-GKF"/>
+                            <constraint firstItem="i53-7o-q5p" firstAttribute="leading" secondItem="WrL-L0-wy8" secondAttribute="leading" constant="10" id="R8F-kp-VPm"/>
+                            <constraint firstItem="WrL-L0-wy8" firstAttribute="trailing" secondItem="NtK-44-XPI" secondAttribute="trailing" constant="50" id="etm-R6-NMA"/>
+                            <constraint firstItem="i53-7o-q5p" firstAttribute="top" secondItem="NtK-44-XPI" secondAttribute="bottom" constant="10" id="pEF-o5-xuS"/>
+                            <constraint firstItem="WrL-L0-wy8" firstAttribute="trailing" secondItem="i53-7o-q5p" secondAttribute="trailing" id="xI1-AH-X4F"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="R8F-kp-VPm"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="f1a-0T-6UO"/>
                     <connections>
@@ -113,7 +135,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8zn-5S-FLJ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="10q-aC-pth">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -131,7 +153,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -26,7 +26,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
         tableView.register(UINib(nibName: "CustomViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         fetchData()
 
@@ -78,7 +77,6 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
         let currentNote = notes![indexPath.row]
         loadedText = currentNote.text!
         loadedTitle = currentNote.title!
-
         self.performSegue(withIdentifier: "mainToOldNote", sender: self)
     }
     

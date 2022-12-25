@@ -1,9 +1,3 @@
-//
-//  SimpleNotesTests.swift
-//  SimpleNotesTests
-//
-//  Created by Denis Borneman on 17.05.2022.
-//
 
 import XCTest
 @testable import SimpleNotes

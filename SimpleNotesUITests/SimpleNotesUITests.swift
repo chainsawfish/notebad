@@ -1,9 +1,3 @@
-//
-//  SimpleNotesUITests.swift
-//  SimpleNotesUITests
-//
-//  Created by Denis Borneman on 17.05.2022.
-//
 
 import XCTest
 
